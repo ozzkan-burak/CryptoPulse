@@ -1,0 +1,6 @@
+@CryptoPulse.API_HostAddress = http://localhost:5008
+
+GET {{CryptoPulse.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
