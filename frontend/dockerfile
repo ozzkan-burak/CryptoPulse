@@ -1,0 +1,21 @@
+# 1. Aşama: Build (İnşa)
+FROM node:20-alpine AS build
+WORKDIR /app
+
+# Paket listelerini kopyala ve bağımlılıkları kur
+COPY package*.json ./
+RUN npm install
+
+# Kaynak kodları kopyala ve build al
+COPY . .
+RUN npm run build
+
+# 2. Aşama: Serve (Yayınlama)
+FROM nginx:alpine
+# Vite varsayılan olarak 'dist' klasörüne build alır
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Nginx portu
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
