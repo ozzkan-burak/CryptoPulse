@@ -69,12 +69,13 @@ Yeni bir terminal açın:
     npm install
     npm run dev
 
-_Arayüz http://localhost:5173 adresinde açılacaktır._
+_Arayüz http://localhost:8081 adresinde açılacaktır._
 
 ## Ekran Görüntüleri
 
-_(Proje tamamlandığında buraya GIF eklenecek)_
+
+<img width="1249" height="648" alt="cyrpto-pulse-project-screen" src="https://github.com/user-attachments/assets/d18f3adc-a072-4e0b-9a16-4c7040db9187" />
 
 ---
 
-_Bu proje, Yüksek Trafikli Sistemler (High Scalability) üzerine yapılan kişisel bir laboratuvar çalışmasıdır._
+_Bu proje, kişisel bir laboratuvar çalışmasıdır._
