@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  api:
+    build: ./backend
+    ports:
+      - '5008:8080'
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  client:
+    build: ./frontend
+    ports:
+      - '8081:80' # Portu 8081'e çekelim (5173 bazen cache'li kalabiliyor)
+    restart: always
+    depends_on:
+      - api
